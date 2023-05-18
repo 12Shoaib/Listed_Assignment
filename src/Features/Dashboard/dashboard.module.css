@@ -7,7 +7,6 @@
 .section_one {
     flex: 0.5;
     box-sizing: border-box;
-
 }
 
 .section_two {
@@ -19,4 +18,15 @@
 }
 ::-webkit-scrollbar {
     display: none;
+}
+
+@media (max-width:500px){
+    .container{
+        height: auto;
+        width: 100vw;
+        background-color: #DDDDDD;
+    }
+    .section_one{
+        position: absolute;
+    }
 }

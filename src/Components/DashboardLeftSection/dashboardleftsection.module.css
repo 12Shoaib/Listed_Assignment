@@ -64,3 +64,22 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media (max-width:500px) {
+    .container {
+        position: absolute;
+        margin: 0px;
+        top: 2.5rem;
+        height: 95vh;
+        width: 14rem;
+        border-radius: 0px;
+    }
+
+    .footer {
+        margin: 0px;
+    }
+
+    .bottom_wrapper {
+        height: 34rem;
+    }
+}

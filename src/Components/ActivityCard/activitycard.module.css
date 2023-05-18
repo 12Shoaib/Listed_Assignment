@@ -16,3 +16,10 @@
     margin: 0px;
     font-family: 'Montserrat', 'san-serif';
 }
+
+@media (max-width:500px){
+    .container{
+        margin: 0.7rem;
+        width: 20rem;
+    }
+}

@@ -26,6 +26,7 @@ const Signin = () => {
             </div>
 
             <div className={signin.section_two}>
+                    <h1 className={signin.mobile_heading}>BOARD.</h1>
                 <div className={signin.wrapper}>
                     <h1 className={signin.section_two_heading}>Sign in</h1>
                     <h2 className={signin.section_two_sub_heading}>Sign in to your account</h2>

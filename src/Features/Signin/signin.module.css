@@ -4,6 +4,10 @@
     display: flex;
 }
 
+.mobile_heading {
+    display: none;
+}
+
 .section_one {
     flex: 2;
     background-color: black;
@@ -48,12 +52,21 @@
 
 }
 
-@media (max-width:850px){
-    .section_one_heading{
-        font-size: 3rem;
+@media (max-width:500px) {
+    .section_one {
+        display: none;
     }
-    .section_one{
-        display: flex;
-        align-items: center;
+
+    .wrapper {
+        padding-left: 1rem;
+    }
+
+    .mobile_heading {
+        display: block;
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+        font-family: 'Montserrat', 'san-serif';
+        color: black;
     }
 }

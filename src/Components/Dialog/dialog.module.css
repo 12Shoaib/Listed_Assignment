@@ -136,3 +136,44 @@ input::placeholder {
     margin-top: 1.2rem;
     font-family: 'Lato', sans-serif;
 }
+
+@media (max-width:500px) {
+    .signin_options_wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .signin_google {
+        height: 2.5rem;
+        width: 20rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .signin_apple {
+        height: 2.5rem;
+        width: 20rem;
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .dialog_box {
+        width: 20rem;
+    }
+
+    .input_box {
+        width: 17rem;
+    }
+
+    .button {
+        width: 17rem;
+    }
+
+    .footer {
+        margin-left: 1.5rem;
+    }
+}

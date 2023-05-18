@@ -1,3 +1,5 @@
+import { useRecoilValue } from 'recoil'
+import { hamburgerMenu } from '../../Recoil/RecoilAtom'
 import { FiPieChart, FiSettings } from 'react-icons/fi'
 import { BsTags } from 'react-icons/bs'
 import { TbCalendarTime } from 'react-icons/tb'
@@ -13,9 +15,10 @@ const data = [
 ]
 
 const DashboardLeftSection = () => {
+    const isHamburgerMenu = useRecoilValue(hamburgerMenu)
     return (
         <div className={dashboardleftsection.main_component}>
-            <div className={dashboardleftsection.container}>
+          {isHamburgerMenu && <div className={dashboardleftsection.container}>
                 <h2 className={dashboardleftsection.tagLine}>Board.</h2>
                 <div className={dashboardleftsection.bottom_wrapper}>
                     <div className={dashboardleftsection.menu_wrapper}>
@@ -28,7 +31,7 @@ const DashboardLeftSection = () => {
                         <p className={dashboardleftsection.menu_options_bottom}>Contact Us</p>
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }
