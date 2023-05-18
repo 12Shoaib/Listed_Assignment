@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_one {
+    height: 14rem;
+    width: 25rem;
+    border-radius: 1.2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    padding-left: 1rem;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_two {
+    height: 14rem;
+    width: 25rem;
+    border-radius: 1.2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pie_chart {
+    width: 11rem;
+    height: 11rem;
+    background: conic-gradient(rgba(238, 132, 132, 1) 0 14%,
+            rgba(246, 220, 125, 1) 14% 45%,
+            rgba(152, 216, 158, 1) 45% 100%);
+    border-radius: 50%;
+}
+
+.wrapper {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.tag_one {
+    color: #98D89E;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tag_two {
+    color: #F6DC7D;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tag_three {
+    color: #EE8484;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sub_heading {
+    color: black;
+    font-family: 'Montserrat', 'san-serif';
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.sale_percantage {
+    font-size: 0.7rem;
+    font-family: 'Lato', 'san-serif';
+    color: #858585;
+}
+
+.heading {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', 'san-serif';
+    margin-left: 1rem;
+}
+
+.content_heading {
+    margin-left: 1rem;
+    width: 10rem;
+    flex-wrap: wrap;
+    font-family: 'Lato', 'san-serif';
+    margin-top: 1rem;
+}
+
+.time {
+    font-family: 'Lato', 'san-serif';
+    font-size: 0.7rem;
+    margin-left: 1rem;
+}
+
+.content_wrapper {
+    border-left: 0.2rem solid #9BDD7C;
+}
+
+.content_wrappers {
+    border-left: 0.2rem solid #6972C3;
+}
+
+.content {
+    margin-left: 1rem;
+}
+.heading_card_one{
+    font-family: 'Montserrat' , 'san-serif';
+    margin-top: 0.8rem;
+}

@@ -1,0 +1,52 @@
+.container {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  .heading {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', 'san-serif';
+  }
+ 
+  .image {
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+  }
+ 
+  .input_box {
+    outline: none;
+    border: 0rem solid black;
+  }
+ 
+  input::placeholder {
+    color: #B0B0B0;
+  }
+ 
+  .input_box_wrapper {
+    height: 1.8rem;
+    width: 11rem;
+    border: 0rem solid black;
+    border-radius: 0.6rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', 'san-serif';
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+ 
+  .wrapper {
+    display: flex;
+    width: 18rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 
+  .logo {
+    font-size: 1.3rem;
+  }

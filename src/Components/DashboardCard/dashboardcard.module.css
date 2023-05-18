@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 3rem;
+}
+
+.card1 {
+    height: 7rem;
+    width: 12rem;
+    background-color: #DDEFE0;
+    color: black;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card2 {
+    height: 7rem;
+    width: 12rem;
+    background-color: #F4ECDD;
+    color: black;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card3 {
+    height: 7rem;
+    width: 12rem;
+    background-color: #EFDADA;
+    color: black;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.card4 {
+    height: 7rem;
+    width: 12rem;
+    background-color: #DEE0EF;
+    color: black;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.content {
+    font-size: 0.8rem;
+    font-family: 'Lato', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.number {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    font-size: 1.6rem;
+    display: flex;
+    margin-left: 9rem;
+}
+
+.content_wrapper {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}

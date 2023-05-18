@@ -19,7 +19,7 @@ const Signin = () => {
                 console.log(error.message)
             })
     }
-    return (
+    return ( 
         <div className={signin.container}>
             <div className={signin.section_one}>
                 <h1 className={signin.section_one_heading}>Board.</h1>
