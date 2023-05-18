@@ -73,10 +73,10 @@
     .container {
         position: absolute;
         margin: 0px;
-        top: 2.5rem;
-        height: 95vh;
+        top: 2.9rem;
+        height: 96vh;
         width: 14rem;
-        border-radius: 0px;
+        border-radius: 4px;
     }
 
     .footer {
