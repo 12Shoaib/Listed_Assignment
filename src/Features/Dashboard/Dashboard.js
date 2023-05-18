@@ -7,24 +7,24 @@ import ActivityCard from '../../Components/ActivityCard/ActivityCard'
 import TopProducts from '../../Components/TopProducts/TopProducts'
 
 const Dashboard = () => {
-    const [meetingData, setMeetingData] = useState('')
+    const [data , setData] = useState('')
 
     useEffect(() => {
-        getTodaysSchedule()
+        getData()
     }, [])
-
-    const getTodaysSchedule = async () => {
-        try {
-            const response = await fetch('https://fakestoreapi.com/products?limit=2')
-            if (!response.ok) {
-                throw new Error("Failed to load the api")
+    
+    const getData = async() => {
+        try{
+                const response = await fetch("/Data.json")
+                if(!response.ok){
+                    throw new Error("Failed to load the data")
+                }
+                const data = await response.json()
+                setData(data)
             }
-            const data = await response.json()
-            setMeetingData(data)
-            console.log(data)
-        } catch (error) {
-            console.log(error)
-        }
+            catch(error) {
+                console.log(error.message)
+            }
     }
 
     return (
@@ -34,9 +34,9 @@ const Dashboard = () => {
             </div>
             <div className={dashboard.section_two}>
                 <DashboardHeader />
-                <DashboardCard />
+                <DashboardCard data={data} />
                 <ActivityCard />
-                <TopProducts meetingData={meetingData} />
+                <TopProducts data={data} />
             </div>
         </div>
     )

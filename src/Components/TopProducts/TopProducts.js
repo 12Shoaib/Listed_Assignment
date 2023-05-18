@@ -1,6 +1,8 @@
 import topproducts from './topproducts.module.css'
 
-const TopProducts = ({ meetingData }) => {
+const TopProducts = ({ data }) => {
+    const {meetingsSchedule} = data
+    const classNames = ["content_wrapper_one" , "content_wrapper_two"]
     return (
         <div className={topproducts.container}>
             <div className={topproducts.card_one}>
@@ -21,14 +23,11 @@ const TopProducts = ({ meetingData }) => {
             <div className={topproducts.card_two}>
                 <h4 className={topproducts.heading}>Today's schedule</h4>
                 <div className={topproducts.content}>
-                    <div className={topproducts.content_wrapper}>
-                        <h5 className={topproducts.content_heading}>Meeting for {meetingData[0]?.title}</h5>
-                        <span className={topproducts.time}>14.00 - 15.00</span>
-                    </div>
-                    <div className={topproducts.content_wrappers}>
-                        <h5 className={topproducts.content_heading}>Meeting for {meetingData[1]?.title}</h5>
-                        <span className={topproducts.time}>14.00 - 15.00</span>
-                    </div>
+                    {meetingsSchedule?.map((element , i) =><div className={topproducts[classNames[i]]}>
+                        <h5 className={topproducts.content_heading}>{element?.clientName}</h5>
+                        <span className={topproducts.time}>{element?.meetingTime}</span>
+                        <span className={topproducts.location}>{element?.location}</span>
+                    </div>)}
                 </div>
 
             </div>
