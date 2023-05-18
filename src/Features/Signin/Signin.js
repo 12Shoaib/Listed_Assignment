@@ -12,7 +12,7 @@ const Signin = () => {
 
     const handleSigninWithGoogle = () => {
         signInWithPopup(auth, provider).then((user) => {
-            setLogin(true)
+            setLogin(prev => !prev)
             navigate('/dashboard')
         })
             .catch((error) => {
