@@ -16,7 +16,7 @@ const DashboardCard = ( { data } ) => {
     const cardClassName = ["card1" , "card2", "card3", "card4"]
     return (
         <div className={dashboardcard.container}>
-           {salesData?.map((element ,i) =>  <div className={dashboardcard[cardClassName[i]]}>
+           {salesData?.map((element ,i) =>  <div key={i} className={dashboardcard[cardClassName[i]]}>
                 <span>{icons[i].iconName}</span>
                 <div className={dashboardcard.content_wrapper}>
                     <p className={dashboardcard.content}>{element.title}</p>

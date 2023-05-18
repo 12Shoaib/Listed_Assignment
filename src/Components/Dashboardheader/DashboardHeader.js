@@ -8,7 +8,7 @@ import dashboardheader from './dashboardheader.module.css'
 const DashboardHeader = () => {
     const [show , setShow] = useRecoilState(hamburgerMenu)
     const handleHamburgerMenuClick = () => {
-        setShow(prev  => !prev)  
+        setShow(!show)  
     }
     return (
         <div className={dashboardheader.container}>

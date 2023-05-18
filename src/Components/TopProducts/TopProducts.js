@@ -31,7 +31,7 @@ const TopProducts = ({ data }) => {
                 <h4 className={topproducts.card_two_sub_heading}>See All <AiOutlineRight /></h4>
                 </div>
                 <div className={topproducts.content}>
-                    {meetingsSchedule?.map((element , i) =><div className={topproducts[classNames[i]]}>
+                    {meetingsSchedule?.map((element , i) =><div key={i} className={topproducts[classNames[i]]}>
                         <h5 className={topproducts.content_heading}>{element?.clientName}</h5>
                         <span className={topproducts.time}>{element?.meetingTime}</span>
                         <span className={topproducts.location}>{element?.location}</span>

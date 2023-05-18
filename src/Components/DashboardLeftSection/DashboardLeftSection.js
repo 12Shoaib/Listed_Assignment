@@ -23,7 +23,7 @@ const DashboardLeftSection = () => {
                 <div className={dashboardleftsection.bottom_wrapper}>
                     <div className={dashboardleftsection.menu_wrapper}>
                         {
-                            data.map((element) => <p className={dashboardleftsection.menu_options}>{element.icon} {element.name}</p>)
+                            data.map((element,i) => <p key={i} className={dashboardleftsection.menu_options}>{element.icon} {element.name}</p>)
                         }
                     </div>
                     <div className={dashboardleftsection.footer}>

@@ -15,10 +15,10 @@ const Dialog = ({ handleSigninWithGoogle }) => {
             </div>
             <div className={dialog.dialog_box}>
                 <div className={dialog.dialog_container}>
-                    <label className={dialog.email_label} for='email'>Email address</label>
+                    <label className={dialog.email_label} htmlFor='email'>Email address</label>
                     <input type='email' className={dialog.input_box} placeholder='Email' id='email' />
 
-                    <label className={dialog.password_label} for='password'>Password</label>
+                    <label className={dialog.password_label} htmlFor='password'>Password</label>
                     <input type='password' className={dialog.input_box} placeholder='Password' id='password' />
                     <a className={dialog.external_Link} href='#'>Forgot Password?</a>
                     <button className={dialog.button}>Sign in</button>
