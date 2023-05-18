@@ -1,4 +1,6 @@
 import topproducts from './topproducts.module.css'
+import {BsChevronDown} from 'react-icons/bs'
+import {AiOutlineRight} from 'react-icons/ai'
 
 const TopProducts = ({ data }) => {
     const {meetingsSchedule} = data
@@ -6,7 +8,10 @@ const TopProducts = ({ data }) => {
     return (
         <div className={topproducts.container}>
             <div className={topproducts.card_one}>
-                <h4 className={topproducts.heading_card_one}>Top Products</h4>
+                <div className={topproducts.card_one_header}>
+                 <h4 className={topproducts.card_one_heading}>Top Products</h4>
+                 <h4 className={topproducts.card_one_sub_heading}>May-June 2021 <BsChevronDown className={topproducts.icon} /></h4>
+                </div>
                 <div className={topproducts.main}>
                     <div className={topproducts.pie_chart}> </div>
                     <ul className={topproducts.wrapper}>
@@ -21,7 +26,10 @@ const TopProducts = ({ data }) => {
                 </div>
             </div>
             <div className={topproducts.card_two}>
-                <h4 className={topproducts.heading}>Today's schedule</h4>
+                <div className={topproducts.card_two_header}>
+                <h4 className={topproducts.card_two_heading}>Today's schedule</h4>
+                <h4 className={topproducts.card_two_sub_heading}>See All <AiOutlineRight /></h4>
+                </div>
                 <div className={topproducts.content}>
                     {meetingsSchedule?.map((element , i) =><div className={topproducts[classNames[i]]}>
                         <h5 className={topproducts.content_heading}>{element?.clientName}</h5>

@@ -7,7 +7,7 @@ import { FaRegUserCircle } from 'react-icons/fa'
 import dashboardleftsection from './dashboardleftsection.module.css'
 
 const data = [
-    { icon: <FiPieChart className={dashboardleftsection.icon} />, name: 'Dashboard' },
+    { icon: <FiPieChart className={dashboardleftsection.icon} />, name: <span className={dashboardleftsection.highlighter}>Dashboard</span>, },
     { icon: <BsTags className={dashboardleftsection.icon} />, name: 'Transactions' },
     { icon: <TbCalendarTime className={dashboardleftsection.icon} />, name: 'Schedules' },
     { icon: <FaRegUserCircle className={dashboardleftsection.icon} />, name: 'Users' },

@@ -21,6 +21,10 @@
     font-family: 'Montserrat', 'san-serif';
 }
 
+.highlighter{
+    font-weight: 600;
+}
+
 .menu_wrapper {
     display: flex;
     flex-direction: column;

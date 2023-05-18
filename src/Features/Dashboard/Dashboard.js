@@ -15,15 +15,15 @@ const Dashboard = () => {
     
     const getData = async() => {
         try{
-                const response = await fetch("/Data.json")
-                if(!response.ok){
-                    throw new Error("Failed to load the data")
-                }
-                const data = await response.json()
-                setData(data)
+               const response = await fetch("/Data.json")
+               if(!response.ok){
+                   throw new Error("Failed to load the data")
+               }
+               const data = await response.json()
+               setData(data)
             }
             catch(error) {
-                console.log(error.message)
+               console.log(error.message)
             }
     }
 

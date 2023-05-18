@@ -4,6 +4,8 @@
     margin-right: 3rem;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .card_one {
@@ -34,8 +36,8 @@
 }
 
 .pie_chart {
-    width: 11rem;
-    height: 11rem;
+    width: 9rem;
+    height: 9rem;
     background: conic-gradient(rgba(238, 132, 132, 1) 0 14%,
             rgba(246, 220, 125, 1) 14% 45%,
             rgba(152, 216, 158, 1) 45% 100%);
@@ -81,11 +83,25 @@
     color: #858585;
 }
 
-.heading {
+.card_two_heading {
     padding: 0px;
     margin: 0px;
     font-family: 'Montserrat', 'san-serif';
     margin-left: 1rem;
+}
+
+.card_two_sub_heading{
+    font-family: 'Montserrat', 'san-serif';
+    font-weight: 400;
+    font-size: 0.6rem;
+    color: #858585;
+    line-height: 23px;
+}
+
+.card_two_header{
+    display: flex;
+    align-items: center;
+    gap: 10rem;
 }
 
 .content_heading {
@@ -126,9 +142,24 @@
 .content {
     margin-left: 1rem;
 }
-.heading_card_one{
+.card_one_heading{
     font-family: 'Montserrat' , 'san-serif';
     margin-top: 0.8rem;
+}
+.card_one_sub_heading{
+    margin-top: 0.8rem;
+    font-weight: 400;
+    font-size: 0.6rem;
+    font-family: 'Montserrat' , 'san-serif';
+    color: #858585;
+    line-height: 23px;
+}
+.card_one_header{
+    display: flex;
+    gap: 10rem;
+}
+.icon{
+    padding: 0rem 0rem 0rem 0.3rem;
 }
 
 @media (max-width:500px){
