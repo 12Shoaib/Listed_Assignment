@@ -10,10 +10,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Signin />} />
                   {/* ----Protect Routing---   */}
-        {/* <Route element={<SecureRouting />}>  */}
+        <Route element={<SecureRouting />}> 
            <Route path="/dashboard" element={<Dashboard />} /> 
-        {/* </Route> */}
-
+        </Route>
       </Routes>
     </div>
   )
