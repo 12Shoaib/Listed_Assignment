@@ -19,8 +19,8 @@ const DashboardCard = ( { data } ) => {
            {salesData?.map((element ,i) =>  <div key={i} className={dashboardcard[cardClassName[i]]}>
                 <span>{icons[i].iconName}</span>
                 <div className={dashboardcard.content_wrapper}>
-                    <p className={dashboardcard.content}>{element.title}</p>
-                    <p className={dashboardcard.number}>{element.count}</p></div>
+                    <p className={dashboardcard.content}>{element?.title}</p>
+                    <p className={dashboardcard.number}>{element?.count}</p></div>
             </div>)}
         </div>
     )
