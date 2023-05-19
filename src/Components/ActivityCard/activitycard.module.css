@@ -1,4 +1,4 @@
-.container{
+.activity_container{
     height: 16rem;
     border-radius: 1.2rem;
     margin-left: 1rem;
@@ -11,15 +11,16 @@
     padding-left: 1rem;
     padding-top: 0.4rem;
 }
-.heading{
+.activity_heading{
     padding: 0px;
     margin: 0px;
     font-family: 'Montserrat', 'san-serif';
 }
 
-@media (max-width:500px){
-    .container{
+@media screen and (max-width:500px) {
+    .activity_container{
         margin: 0.7rem;
         width: 20rem;
     }
+    
 }

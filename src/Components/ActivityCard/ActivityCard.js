@@ -3,8 +3,8 @@ import Graph from '../Graph/Graph'
 
 const ActivityCard = () => {
     return(
-        <div className={activitycard.container}>
-            <h4 className={activitycard.heading} >Activity</h4>
+        <div className={activitycard.activity_container}>
+            <h4 className={activitycard.activity_heading} >Activity</h4>
             <Graph/>
         </div>
     )

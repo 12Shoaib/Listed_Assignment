@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom"
 import Signin from "./Features/Signin/Signin"
 import Dashboard from "./Features/Dashboard/Dashboard"
 import SecureRouting from "./Components/SecureRouting/SecureRouting"
-import './App.css'
 
 const App = () => {
   return(
