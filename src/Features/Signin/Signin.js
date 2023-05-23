@@ -22,7 +22,6 @@ const Signin = () => {
       <div className={signin.section_one}>
         <h1 className={signin.section_one_heading}>Board.</h1>
       </div>
-
       <div className={signin.section_two}>
         <h1 className={signin.mobile_heading}>BOARD.</h1>
         <div className={signin.wrapper}>
