@@ -1,15 +1,11 @@
 import { Outlet, Navigate } from 'react-router-dom'
-import { useRecoilValue } from 'recoil'
-import {loginStatus} from '../../Recoil/RecoilAtom'
-
 
 const SecureRouting = () => {
-    const login = useRecoilValue(loginStatus)
-
+    const authStatus = JSON.parse(sessionStorage.getItem('userAuth'))
     return(
         <div>
             {
-                login ?
+                authStatus ?
                 <Outlet />
                 :
                 <Navigate to='/'/>

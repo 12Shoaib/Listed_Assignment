@@ -1,23 +1,21 @@
 import { useNavigate } from 'react-router-dom'
-import { useSetRecoilState } from 'recoil'
-import { loginStatus } from '../../Recoil/RecoilAtom'
-import { signInWithPopup } from 'firebase/auth'
+import { browserSessionPersistence, setPersistence, signInWithPopup } from 'firebase/auth'
 import { auth, provider } from '../../AuthenticationSetup/Firebase'
 import signin from './signin.module.css'
 import Dialog from '../../Components/Dialog/Dialog'
 
 const Signin = () => {
     const navigate = useNavigate()
-    const setLogin = useSetRecoilState(loginStatus)
 
     const handleSigninWithGoogle = () => {
-        signInWithPopup(auth, provider).then((user) => {
-            setLogin((prev) => !prev)
+        signInWithPopup(auth, provider)
+        .then((user) => {
+            sessionStorage.setItem('userAuth' , JSON.stringify(user))
             navigate('/dashboard')
         })
-            .catch((error) => {
-                console.log(error.message)
-            })
+        .catch((error) => {
+            console.log(error.message)
+        })     
     }
     return ( 
         <div className={signin.container}>
