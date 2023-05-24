@@ -6,7 +6,7 @@ import Dialog from "../../Components/Dialog/Dialog";
 
 const Signin = () => {
   const navigate = useNavigate();
-
+  
   const handleSigninWithGoogle = () => {
     signInWithPopup(auth, provider)
       .then((user) => {

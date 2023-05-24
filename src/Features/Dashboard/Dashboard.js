@@ -8,7 +8,7 @@ import TopProducts from "../../Components/TopProducts/TopProducts";
 
 const Dashboard = () => {
   const [data, setData] = useState("");
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
