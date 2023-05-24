@@ -6,14 +6,14 @@ import { IoClose } from "react-icons/io5";
 import dashboardheader from "./dashboardheader.module.css";
 
 const DashboardHeader = () => {
-  const [show, setShow] = useRecoilState(hamburgerMenu);
+  const [isMenuVisible, setIsMenuVisible] = useRecoilState(hamburgerMenu);
   const handleHamburgerMenuClick = () => {
-    setShow(!show);
+    setIsMenuVisible(!isMenuVisible);
   };
   return (
     <div className={dashboardheader.container}>
       <div className={dashboardheader.header}>
-        {!show ? (
+        {!isMenuVisible ? (
           <GoThreeBars
             onClick={handleHamburgerMenuClick}
             className={dashboardheader.bar_icon}

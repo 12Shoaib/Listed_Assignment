@@ -4,7 +4,7 @@
   display: flex;
 }
 
-.mobile_heading {
+.mobile_title {
   display: none;
 }
 
@@ -25,7 +25,7 @@
   justify-content: center;
 }
 
-.section_one_heading {
+.section_one_title {
   padding: 0px;
   margin: 0px;
   color: white;
@@ -33,7 +33,7 @@
   font-family: "Montserrat", "san-serif";
 }
 
-.section_two_heading {
+.section_two_title {
   padding: 0px;
   margin: 0px;
   font-size: 2rem;
@@ -42,7 +42,7 @@
   font-weight: 700;
 }
 
-.section_two_sub_heading {
+.section_two_sub_title {
   padding: 0px;
   margin: 0px;
   font-family: "Montserrat", "san-serif";
@@ -60,7 +60,7 @@
     padding-left: 1rem;
   }
 
-  .mobile_heading {
+  .mobile_title {
     display: block;
     font-size: 2rem;
     padding-bottom: 1rem;

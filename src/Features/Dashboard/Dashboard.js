@@ -1,10 +1,13 @@
+import { Helmet } from "react-helmet";
+import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import dashboard from "./dashboard.module.css";
 import DashboardSidebar from "../../Components/DashboardSidebar/DashboardSidebar";
 import DashboardHeader from "../../Components/Dashboardheader/DashboardHeader";
 import DashboardCard from "../../Components/DashboardCard/DashboardCard";
-import ActivityCard from "../../Components/ActivityCard/ActivityCard";
+import Chart from "../../Components/Chart/Chart";
 import TopProducts from "../../Components/TopProducts/TopProducts";
+import "react-toastify/dist/ReactToastify.css";
 
 const Dashboard = () => {
   const [data, setData] = useState("");
@@ -19,7 +22,10 @@ const Dashboard = () => {
         const data = await response.json();
         setData(data);
       } catch (error) {
-        console.log(error.message);
+        toast.error("Something went wrong", {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 5000,
+        });
       }
     };
     fetchData();
@@ -27,14 +33,19 @@ const Dashboard = () => {
 
   return (
     <div className={dashboard.container}>
+      <Helmet>
+        <title>Dashboard</title>
+        <meta name="description" content="Dashboard " />
+      </Helmet>
       <div className={dashboard.section_one}>
         <DashboardSidebar />
       </div>
       <div className={dashboard.section_two}>
         <DashboardHeader />
         <DashboardCard data={data} />
-        <ActivityCard />
+        <Chart />
         <TopProducts data={data} />
+        <ToastContainer />
       </div>
     </div>
   );

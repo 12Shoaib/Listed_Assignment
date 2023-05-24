@@ -127,7 +127,7 @@ input::placeholder {
   font-family: "Lato", sans-serif;
 }
 
-.footer {
+.bottom {
   color: #858585;
   margin-top: 1.2rem;
   font-family: "Lato", sans-serif;
@@ -169,7 +169,7 @@ input::placeholder {
     width: 17rem;
   }
 
-  .footer {
+  .bottom {
     margin-left: 1.5rem;
   }
 }

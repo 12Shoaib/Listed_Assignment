@@ -1,12 +1,14 @@
 import React from "react";
-import './app.css'
+import "./app.css";
 import { Route, Routes } from "react-router-dom";
 const LazyDashboard = React.lazy(() =>
-import("./Features/Dashboard/Dashboard")
+  import("./Features/Dashboard/Dashboard")
 );
-const LazySignin = React.lazy(() => import("./Features/Signin/Signin"));
+const LazySignIn = React.lazy(() =>
+  import("./Features/SignInScreen/SignInScreen")
+);
 const LazySecureRouting = React.lazy(() =>
-import("./Components/SecureRouting/SecureRouting")
+  import("./Components/SecureRouting/SecureRouting")
 );
 
 const App = () => {
@@ -17,7 +19,7 @@ const App = () => {
           path="/"
           element={
             <React.Suspense fallback="Loading...">
-              <LazySignin />
+              <LazySignIn />
             </React.Suspense>
           }
         />

@@ -34,6 +34,7 @@ const TopProducts = ({ data }) => {
           </ul>
         </div>
       </div>
+
       <div className={topproducts.card_two}>
         <div className={topproducts.card_two_header}>
           <h4 className={topproducts.card_two_heading}>Today's schedule</h4>
@@ -42,13 +43,13 @@ const TopProducts = ({ data }) => {
           </h4>
         </div>
         <div className={topproducts.content}>
-          {meetingsSchedule?.map((element, i) => (
+          {meetingsSchedule?.map((meetings, i) => (
             <div key={i} className={topproducts[classNames[i]]}>
               <h5 className={topproducts.content_heading}>
-                {element?.clientName}
+                {meetings?.clientName}
               </h5>
-              <span className={topproducts.time}>{element?.meetingTime}</span>
-              <span className={topproducts.location}>{element?.location}</span>
+              <span className={topproducts.time}>{meetings?.meetingTime}</span>
+              <span className={topproducts.location}>{meetings?.location}</span>
             </div>
           ))}
         </div>
