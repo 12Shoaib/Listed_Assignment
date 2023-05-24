@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import dashboard from "./dashboard.module.css";
 import DashboardSidebar from "../../Components/DashboardSidebar/DashboardSidebar";
-import DashboardHeader from "../../Components/Dashboardheader/DashboardHeader";
+import DashboardHeader from "../../Components/DashboardHeader/DashboardHeader";
 import DashboardCard from "../../Components/DashboardCard/DashboardCard";
 import Chart from "../../Components/Chart/Chart";
 import TopProducts from "../../Components/TopProducts/TopProducts";
