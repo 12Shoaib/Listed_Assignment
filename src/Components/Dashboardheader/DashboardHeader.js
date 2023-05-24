@@ -1,7 +1,7 @@
 import { BiBell, BiSearch } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
 import { useRecoilState } from "recoil";
-import { hamburgerMenu } from "../../Recoil/RecoilAtom";
+import { hamburgerMenu } from "../Recoil/RecoilAtom";
 import { IoClose } from "react-icons/io5";
 import dashboardheader from "./dashboardheader.module.css";
 
@@ -38,6 +38,7 @@ const DashboardHeader = () => {
         <BiBell />
         <img
           src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="user"
           className={dashboardheader.image}
         />
       </div>

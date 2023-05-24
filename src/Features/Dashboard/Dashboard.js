@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import dashboard from "./dashboard.module.css";
-import DashboardLeftSection from "../../Components/DashboardLeftSection/DashboardLeftSection";
+import DashboardSidebar from "../../Components/DashboardSidebar/DashboardSidebar";
 import DashboardHeader from "../../Components/Dashboardheader/DashboardHeader";
 import DashboardCard from "../../Components/DashboardCard/DashboardCard";
 import ActivityCard from "../../Components/ActivityCard/ActivityCard";
@@ -8,9 +8,9 @@ import TopProducts from "../../Components/TopProducts/TopProducts";
 
 const Dashboard = () => {
   const [data, setData] = useState("");
-
+  
   useEffect(() => {
-    const getData = async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch("/Data.json");
         if (!response.ok) {
@@ -22,13 +22,13 @@ const Dashboard = () => {
         console.log(error.message);
       }
     };
-    getData();
+    fetchData();
   }, []);
 
   return (
     <div className={dashboard.container}>
       <div className={dashboard.section_one}>
-        <DashboardLeftSection />
+        <DashboardSidebar />
       </div>
       <div className={dashboard.section_two}>
         <DashboardHeader />
