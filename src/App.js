@@ -1,6 +1,8 @@
 import React from "react";
 import "./app.css";
 import { Route, Routes } from "react-router-dom";
+import { ErrorBoundary } from "react-error-boundary";
+import FallbackScreen from "./Components/FallbackScreen/FallbackScreen";
 const LazyDashboard = React.lazy(() =>
   import("./Features/Dashboard/Dashboard")
 );
@@ -14,33 +16,35 @@ const LazySecureRouting = React.lazy(() =>
 const App = () => {
   return (
     <div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <React.Suspense fallback="Loading...">
-              <LazySignIn />
-            </React.Suspense>
-          }
-        />
-        {/* ----Protect Routing---   */}
-        <Route
-          element={
-            <React.Suspense fallback="Loading...">
-              <LazySecureRouting />
-            </React.Suspense>
-          }
-        >
+      <ErrorBoundary FallbackComponent={FallbackScreen}>
+        <Routes>
           <Route
-            path="/dashboard"
+            path="/"
             element={
               <React.Suspense fallback="Loading...">
-                <LazyDashboard />
+                <LazySignIn />
               </React.Suspense>
             }
           />
-        </Route>
-      </Routes>
+          {/* ----Protect Routing---   */}
+          <Route
+            element={
+              <React.Suspense fallback="Loading...">
+                <LazySecureRouting />
+              </React.Suspense>
+            }
+          >
+            <Route
+              path="/dashboard"
+              element={
+                <React.Suspense fallback="Loading...">
+                  <LazyDashboard />
+                </React.Suspense>
+              }
+            />
+          </Route>
+        </Routes>
+      </ErrorBoundary>
     </div>
   );
 };
